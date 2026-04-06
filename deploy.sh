@@ -176,7 +176,7 @@ deploy_n8n() {
         -e WEBHOOK_URL="https://${DOMAIN}/webhook/" \
         -e EXECUTION_MODE=regular \
         -v "$DATA_DIR:/home/node/.n8n" \
-        n8n:latest
+        n8nio/n8n:latest
 
     log_success "n8n container started and listening on 127.0.0.1:${N8N_PORT}"
 
